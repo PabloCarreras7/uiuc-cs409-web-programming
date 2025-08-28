@@ -2,34 +2,43 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-module.exports = {
-  mode: 'development',
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist',
-  },
-  entry: './src/index.js',
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader'],
-      }
+module.exports = (env, argv) => {
+  const isProd = argv && argv.mode === 'production';
+
+  return {
+    mode: isProd ? 'production' : 'development',
+    devtool: isProd ? 'source-map' : 'inline-source-map',
+    performance: { hints: false },
+    devServer: {
+      static: { directory: path.resolve(__dirname, 'build') }, // replaces devServer.contentBase
+      historyApiFallback: true,
+      port: 8080,
+      open: true,
+    },
+    entry: './src/index.js',
+    module: {
+      rules: [
+        { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+        {
+          test: /\.(png|svg|jpe?g|gif|woff2?|eot|ttf|otf)$/i,
+          type: 'asset/resource',                       // replaces file-loader
+        },
+      ],
+    },
+    plugins: [
+      new CleanWebpackPlugin(),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: path.resolve(__dirname, 'src/index.html'), to: path.resolve(__dirname, 'build/index.html') },
+          { from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'build/assets'), noErrorOnMissing: true },
+        ],
+      }),
     ],
-  },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin([
-      { from: path.resolve(__dirname, 'src/index.html'), to: path.resolve(__dirname, 'dist') },
-      { from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'dist/assets') }
-    ])
-  ],
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+    output: {
+      path: path.resolve(__dirname, 'build'),
+      filename: isProd ? 'bundle.[contenthash].js' : 'bundle.js',
+      publicPath: isProd ? '/mp0/' : '/',
+      assetModuleFilename: 'assets/[name][contenthash][ext][query]',
+    },
+  };
 };
