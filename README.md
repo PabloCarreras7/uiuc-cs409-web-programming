@@ -25,7 +25,7 @@ To get started, follow the [environment setup](#environment-setup).
 
 ## Environment Setup
 1. Make sure you have [Node.js](https://nodejs.org/en/) and [git](https://git-scm.com/) installed.
-2. Create an account on [GitHub](https://github.com/). You may be prompted to sign in with your Illinois email, since our organization is managed under the University Enterprise Github.
+2. Create an account on [GitHub](https://github.com/). You may be prompted to sign in with your Illinois email.
 3. Clone this repository:
 `git clone https://github.com/cs409-fa25/mp0 mp0`, then `cd mp0`
 4. Install dependencies:
@@ -60,15 +60,19 @@ This assignment is worth 5% of your final grade. Breakdown is as follows:
 
 ## Submission Details
 Here's what you will need to submit:
-1. Create a private repository on GitHub. Make sure "Initialize this repository with a README" is **not** checked.
-2. Change the remote url for the mp0 directory to the url of the new private repository you created.
+1. Create a private repository on GitHub:
+    a. Format the repo name as `fa25_cs409_[your_netid]_mp0`. 
+    b. Set your repo visibility to **private**. 
+    c. Make sure "Initialize this repository with a README" is **not** checked.
+2. Change the remote url for your mp0 directory to the url of the new private repository you created.
 ```
 git remote rename origin old-origin
-git remote add origin git@github.com:<your-github-username>/mp0.git
+git remote add origin git@github.com:cs409-fa25/fa25_cs409_[your_netid]_mp0.git
 ```
 3. Commit and push your local changes to this new repository.
-4. `.github/workflows/static.yml` file automatically makes a GitHub CI pipeline run to deploy your code. After the pipeline finishes, your site should be live at `https://<your-github-username>.github.io/mp0`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
-5. Invite `fa25-cs409-course-staff` as a collaborator.
+4. `.github/workflows/static.yml` file automatically makes a GitHub CI pipeline run to deploy your code. After the pipeline finishes, your site should be live at `https://cs409-fa25.github.io/fa25_cs409_[your_netid]_mp0`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
+5. Invite `fa25-cs409-course-staff` to your repository:
+    a. On your repo page: go to the Settings tab > under "Access", click on "Collaborators and teams" > Click "Add teams" and choose `fa25_cs409_staff-team`
 6. Fill out and submit the form [here](https://docs.google.com/forms/d/e/1FAIpQLSdZfmF6IsyH2hKBegp9voMGalZYFHnALKMQAVg_p7OTA4EILg/viewform?usp=sharing&ouid=103731398038409469401).
 
 ## Large Language Model (LLM) Usage Policy
