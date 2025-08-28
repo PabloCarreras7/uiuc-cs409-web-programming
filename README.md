@@ -70,6 +70,10 @@ git remote rename origin old-origin
 git remote add origin git@github.com:cs409-fa25/fa25_cs409_[your_netid]_mp0.git
 ```
 3. Commit and push your local changes to this new repository.
+4. After pushing, check your repository page and set your Github Pages deployment to be public. 
+    a. Go to the "Settings" tab 
+    b. Click on "Pages" in sidebar 
+    c. Set GitHub Pages visibility to be "Public"
 4. `.github/workflows/static.yml` file automatically makes a GitHub CI pipeline run to deploy your code. After the pipeline finishes, your site should be live at `https://cs409-fa25.github.io/fa25_cs409_[your_netid]_mp0`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
 5. Invite `fa25-cs409-course-staff` to your repository:
     a. On your repo page: go to the Settings tab > under "Access", click on "Collaborators and teams" > Click "Add teams" and choose `fa25_cs409_staff-team`
