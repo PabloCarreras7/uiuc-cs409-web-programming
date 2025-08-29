@@ -38,6 +38,36 @@ If the web browser does not open automatically, go to `http://localhost:8080/` t
 
 You should now be able to edit the files in the `src` folder and see the changes in your browser (upon saving changes and refreshing your page).
 
+You will need to submit your code as a GitHub repository and deploy it as a website. The steps below will guide you on how to do it.
+
+#### Set Up a Github Repository
+You will need to create a GitHub repo and make us collaborators.
+1. [Create a public repository on GitHub.](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) Make sure "Initialize this repository with a README" is **not** checked.
+2. Change the remote url for your local mp0 directory to the url of the new public repository you created.
+```
+git remote rename origin old-origin
+git remote add origin git@github.com:<your-github-username>/mp0.git
+```
+3. Commit and push your local changes to this new repository.
+```
+git add . # "." adds all changed files, can also add specific files too
+git commit -m [my-commit-message] # message should be clear and meaningful
+git push origin main
+```
+5. Invite the TAs to your repository as collaborators:
+    - On your repo page: go to Settings >Collaborators > Click "Add teams" > "Add people"
+    - The TA GitHubs are: [@carlguo2](https://github.com/carlguo2), [@eunice-chan](https://github.com/eunice-chan), and [@RizkyWellyanto](https://github.com/RizkyWellyanto)
+
+### Deploying the MP
+In order for us to view and grade your MP, you will be deploying your webpage with GitHub's pipelines. This should happen automatically after pushing to your repository, through Github Actions deployment pipeline.
+
+You will need to do some additional to properly deploy the website. There are a few settings you will need to change in your GitHub repository.
+1. Set GitHub Pages Deployment Source to Github Actions
+   - In your Github repo, go to Settings > Pages > Build and Deployment > Source > Select "GitHub Actions"
+<!-- 3. Set GitHub Pages Visibility to **public**, otherwise your deployed url will be randomized. -->
+
+`.github/workflows/static.yml` file automatically makes a GitHub CI pipeline run to build and deploy your code as a website. After the pipeline finishes, your site should be live at `https://<your-github-username>.gitlab.io/mp0`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
+
 ## Grading Breakdown
 This assignment is worth 5% of your final grade. Breakdown is as follows:
 1. Correct HTML tags and content (2%)
@@ -54,38 +84,7 @@ This assignment is worth 5% of your final grade. Breakdown is as follows:
 - If you think something you’re doing might not be acceptable, please ask on Piazza.
 
 ## Submission Details
-You will need to submit your code as a GitHub repository and deploy it as a website. The steps below will guide you on how to do it.
-
-#### Set Up a Github Repository
-You will need to create a GitHub repo and make us collaborators.
-1. [Create a public repository on GitHub.](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) Make sure "Initialize this repository with a README" is **not** checked.
-2. Change the remote url for your local mp0 directory to the url of the new private repository you created.
-```
-git remote rename origin old-origin
-git remote add origin git@github.com:cs409-fa25/<your-github-username>/mp0.git
-```
-3. Commit and push your local changes to this new repository.
-```
-git add . # "." adds all changed files, can also add specific files too
-git commit -m [my-commit-message] # message should be clear and meaningful
-git push origin main
-```
-5. Invite the TAs to your repository as collaborators:
-    - On your repo page: go to Settings >Collaborators > Click "Add teams" > "Add people"
-    - The TA GitHubs are: @carlguo2, @eunice-chan, and @RizkyWellyanto
-
-### Deploying the MP
-In order for us to view and grade your MP, you will be deploying your webpage with GitHub's pipelines. This should happen automatically after pushing to your repository, through Github Actions deployment pipeline.
-
-You will need to do some additional to properly deploy the website. There are a few settings you will need to change in your GitHub repository.
-1. Set GitHub Pages Deployment Source to Github Actions
-   - In your Github repo, go to Settings > Build and Deployment > Source > Select "GitHub Actions"
-3. Set GitHub Pages Visibility to **public**, otherwise your deployed url will be randomized.
-
-`.github/workflows/static.yml` file automatically makes a GitHub CI pipeline run to deploy your code. After the pipeline finishes, your site should be live at `https://<your-github-username>.gitlab.io/mp0`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
-
-### Fill Out our Google Form
-Once the above steps are complete, fill out and submit the form [here](https://docs.google.com/forms/d/e/1FAIpQLSdZfmF6IsyH2hKBegp9voMGalZYFHnALKMQAVg_p7OTA4EILg/viewform?usp=sharing&ouid=103731398038409469401).
+After you have completed the assignment and have a deployed website, fill out and submit the form [here](https://docs.google.com/forms/d/e/1FAIpQLSdZfmF6IsyH2hKBegp9voMGalZYFHnALKMQAVg_p7OTA4EILg/viewform?usp=sharing&ouid=103731398038409469401).
 
 ## Large Language Model (LLM) Usage Policy
 
