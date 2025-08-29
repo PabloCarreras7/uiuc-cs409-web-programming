@@ -7,6 +7,7 @@
 3. [Grading Breakdown](#grading-breakdown)
 4. [Rules](#rules)
 5. [Submission Details](#submission-details)
+6. [Large Language Model (LLM) Usage Policy](#large-language-model-llm-usage-policy)
 
 ## Assignment
 This assignment designed to help you set up your development environment. You will build a simple card using only HTML/CSS. The card will look like [this example](http://i.imgur.com/aeKrEga.png) except with your own details.
@@ -25,9 +26,9 @@ To get started, follow the [environment setup](#environment-setup).
 
 ## Environment Setup
 1. Make sure you have [Node.js](https://nodejs.org/en/) and [git](https://git-scm.com/) installed.
-2. Create an account on [GitHub](https://github.com/). You may be prompted to sign in with your Illinois email.
+2. Create an account on [GitHub](https://github.com/).
 3. Clone this repository:
-`git clone https://github.com/cs409-fa25/mp0 mp0`, then `cd mp0`
+`git clone https://github.com/cs409-fa25/mp0`, then `cd mp0`
 4. Install dependencies:
 `npm install`
 5. Start the dev server:
@@ -35,13 +36,7 @@ To get started, follow the [environment setup](#environment-setup).
 
 If the web browser does not open automatically, go to `http://localhost:8080/` to view your page. Note that if for some reason your port 8080 is occupied, it will default to 8081. If you can see "Hello World!", then you are all set!
 
-You should now be able to edit the files in the `src` folder and see the changes in your browser.
-
-### Deploying the MP
-In order for us to view and grade your MP, you will be deploying your webpage with GitHub's pipelines. This should happen automatically after pushing to your repository, through Github Actions deployment pipeline.
-<!-- Due to [abuses with Gitlab's free pipeline](https://forum.gitlab.com/t/concern-about-gitlab-asking-for-credit-card/54479), you will need to provide a valid credit/debit card to verify you are a real user before deploying. You may see a $1 transaction on your account, don't panic, Gitlab does this to verify the card, **but no money will be transferred**.
-
-To test your code locally, in the file `package.json`, replace `"start": "export NODE_OPTIONS=--openssl-legacy-provider; webpack-dev-server --open` with `"start": "webpack-dev-server --open"`. However, DO NOT COMMIT these changes to your repository, as this will affect your code's ability to deploy.  -->
+You should now be able to edit the files in the `src` folder and see the changes in your browser (upon saving changes and refreshing your page).
 
 ## Grading Breakdown
 This assignment is worth 5% of your final grade. Breakdown is as follows:
@@ -59,25 +54,38 @@ This assignment is worth 5% of your final grade. Breakdown is as follows:
 - If you think something you’re doing might not be acceptable, please ask on Piazza.
 
 ## Submission Details
-Here's what you will need to submit:
-1. Create a private repository on GitHub:
-    a. Format the repo name as `fa25_cs409_[your_netid]_mp0`. 
-    b. Set your repo visibility to **private**. 
-    c. Make sure "Initialize this repository with a README" is **not** checked.
-2. Change the remote url for your mp0 directory to the url of the new private repository you created.
+You will need to submit your code as a GitHub repository and deploy it as a website. The steps below will guide you on how to do it.
+
+#### Set Up a Github Repository
+You will need to create a GitHub repo and make us collaborators.
+1. [Create a public repository on GitHub.](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) Make sure "Initialize this repository with a README" is **not** checked.
+2. Change the remote url for your local mp0 directory to the url of the new private repository you created.
 ```
 git remote rename origin old-origin
-git remote add origin git@github.com:cs409-fa25/fa25_cs409_[your_netid]_mp0.git
+git remote add origin git@github.com:cs409-fa25/<your-github-username>/mp0.git
 ```
 3. Commit and push your local changes to this new repository.
-4. After pushing, check your repository page and set your Github Pages deployment to be public. 
-    a. Go to the "Settings" tab 
-    b. Click on "Pages" in sidebar 
-    c. Set GitHub Pages visibility to be "Public"
-4. `.github/workflows/static.yml` file automatically makes a GitHub CI pipeline run to deploy your code. After the pipeline finishes, your site should be live at `https://cs409-fa25.github.io/fa25_cs409_[your_netid]_mp0`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
-5. Invite `fa25-cs409-course-staff` to your repository:
-    a. On your repo page: go to the Settings tab > under "Access", click on "Collaborators and teams" > Click "Add teams" and choose `fa25_cs409_staff-team`
-6. Fill out and submit the form [here](https://docs.google.com/forms/d/e/1FAIpQLSdZfmF6IsyH2hKBegp9voMGalZYFHnALKMQAVg_p7OTA4EILg/viewform?usp=sharing&ouid=103731398038409469401).
+```
+git add . # "." adds all changed files, can also add specific files too
+git commit -m [my-commit-message] # message should be clear and meaningful
+git push origin main
+```
+5. Invite the TAs to your repository as collaborators:
+    - On your repo page: go to Settings >Collaborators > Click "Add teams" > "Add people"
+    - The TA GitHubs are: @carlguo2, @eunice-chan, and @RizkyWellyanto
+
+### Deploying the MP
+In order for us to view and grade your MP, you will be deploying your webpage with GitHub's pipelines. This should happen automatically after pushing to your repository, through Github Actions deployment pipeline.
+
+You will need to do some additional to properly deploy the website. There are a few settings you will need to change in your GitHub repository.
+1. Set GitHub Pages Deployment Source to Github Actions
+   - In your Github repo, go to Settings > Build and Deployment > Source > Select "GitHub Actions"
+3. Set GitHub Pages Visibility to **public**, otherwise your deployed url will be randomized.
+
+`.github/workflows/static.yml` file automatically makes a GitHub CI pipeline run to deploy your code. After the pipeline finishes, your site should be live at `https://<your-github-username>.gitlab.io/mp0`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
+
+### Fill Out our Google Form
+Once the above steps are complete, fill out and submit the form [here](https://docs.google.com/forms/d/e/1FAIpQLSdZfmF6IsyH2hKBegp9voMGalZYFHnALKMQAVg_p7OTA4EILg/viewform?usp=sharing&ouid=103731398038409469401).
 
 ## Large Language Model (LLM) Usage Policy
 
