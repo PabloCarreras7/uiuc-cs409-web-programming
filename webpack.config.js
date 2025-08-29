@@ -10,7 +10,7 @@ module.exports = (env, argv) => {
     devtool: isProd ? 'source-map' : 'inline-source-map',
     performance: { hints: false },
     devServer: {
-      static: { directory: path.resolve(__dirname, 'build') }, // replaces devServer.contentBase
+      static: { directory: path.resolve(__dirname, 'build') },
       historyApiFallback: true,
       port: 8080,
       open: true,
@@ -36,8 +36,8 @@ module.exports = (env, argv) => {
     ],
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: isProd ? 'bundle.[contenthash].js' : 'bundle.js',
-      publicPath: isProd ? '/mp0/' : '/',
+      filename: 'bundle.js',
+      // publicPath: isProd ? '/mp0/' : '/',
       assetModuleFilename: 'assets/[name][contenthash][ext][query]',
     },
   };
