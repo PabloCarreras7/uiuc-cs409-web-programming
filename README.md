@@ -49,15 +49,6 @@ git remote rename origin old-origin
 git remote add origin git@github.com:<your-github-username>/mp0.git
 # run `git remote -v` to check your origin 
 ```
-3. Commit and push your local changes to this new repository.
-```
-git add . # "." adds all changed files, can also add specific files too
-git commit -m "[my-commit-message]" # message should be clear and meaningful
-git push origin main
-```
-5. Invite the TAs to your repository as collaborators:
-    - On your repo page: go to Settings >Collaborators > Click "Add teams" > "Add people"
-    - The TA GitHubs are: [@carlguo2](https://github.com/carlguo2), [@eunice-chan](https://github.com/eunice-chan), and [@RizkyWellyanto](https://github.com/RizkyWellyanto)
 
 ### Deploying the MP
 In order for us to view and grade your MP, you will be deploying your webpage with GitHub's pipelines. This should happen automatically after pushing to your repository, through Github Actions deployment pipeline.
@@ -68,6 +59,14 @@ You will need to do some additional to properly deploy the website. There are a 
 <!-- 3. Set GitHub Pages Visibility to **public**, otherwise your deployed url will be randomized. -->
 
 `.github/workflows/static.yml` file automatically makes a GitHub CI pipeline run to build and deploy your code as a website. After the pipeline finishes, your site should be live at `https://<your-github-username>.gitlab.io/mp0`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
+
+### Pushing Code Changes
+Commit and push your local changes to this new repository.
+```
+git add . # "." adds all changed files, can also add specific files too
+git commit -m "[my-commit-message]" # message should be clear and meaningful
+git push origin main
+```
 
 ## Grading Breakdown
 This assignment is worth 5% of your final grade. Breakdown is as follows:
