@@ -52,7 +52,7 @@ git remote add origin git@github.com:<your-github-username>/mp0.git
 3. Commit and push your local changes to this new repository.
 ```
 git add . # "." adds all changed files, can also add specific files too
-git commit -m [my-commit-message] # message should be clear and meaningful
+git commit -m "[my-commit-message]" # message should be clear and meaningful
 git push origin main
 ```
 5. Invite the TAs to your repository as collaborators:
