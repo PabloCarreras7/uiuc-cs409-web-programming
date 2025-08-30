@@ -47,6 +47,7 @@ You will need to create a GitHub repo and make us collaborators.
 ```
 git remote rename origin old-origin
 git remote add origin git@github.com:<your-github-username>/mp0.git
+# run `git remote -v` to check your origin 
 ```
 3. Commit and push your local changes to this new repository.
 ```
