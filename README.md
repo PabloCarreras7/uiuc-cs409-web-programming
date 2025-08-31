@@ -58,7 +58,7 @@ You will need to do some additional to properly deploy the website. There are a 
    - In your Github repo, go to Settings > Pages > Build and Deployment > Source > Select "GitHub Actions"
 <!-- 3. Set GitHub Pages Visibility to **public**, otherwise your deployed url will be randomized. -->
 
-`.github/workflows/static.yml` file automatically makes a GitHub CI pipeline run to build and deploy your code as a website. After the pipeline finishes, your site should be live at `https://<your-github-username>.gitlab.io/mp0`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
+`.github/workflows/static.yml` file automatically makes a GitHub CI pipeline run to build and deploy your code as a website. After the pipeline finishes, your site should be live at `https://<your-github-username>.github.io/mp0`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
 
 ### Pushing Code Changes
 Commit and push your local changes to this new repository.
