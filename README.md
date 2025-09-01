@@ -28,7 +28,7 @@ To get started, follow the [environment setup](#environment-setup).
 1. Make sure you have [Node.js](https://nodejs.org/en/) and [git](https://git-scm.com/) installed.
 2. Create an account on [GitHub](https://github.com/).
 3. Clone this repository:
-`git clone https://github.com/cs409-fa25/mp0`, then `cd mp0`
+`git clone https://github.com/cs409-fa25/mp0` or `git@github.com:cs409-fa25/mp0.git`, then `cd mp0`
 4. Install dependencies:
 `npm install`
 5. Start the dev server:
