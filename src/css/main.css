@@ -1,1 +1,22 @@
 /* Your CSS here. */
+body{
+      font-family: Arial, sans-serif;
+      background-color: #f9f8fb;
+    }
+
+    .card {
+      background-color: #605e60;
+      margin: 50px 350px ;
+      padding: 6px;
+      padding-bottom: 200px;
+      color: white;
+      text-align: center;
+      }
+
+    .photo img {
+      max-width: 50%;
+      display: block;
+      margin: 10px auto auto auto;
+      width: 150px;
+      height: 150px;
+    }
