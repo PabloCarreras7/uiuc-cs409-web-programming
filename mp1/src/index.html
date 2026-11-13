@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MP1 - Pablo Carreras</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <header class="navbar" role="banner">
+  <nav class="navbar__inner" aria-label="Primary">
+    <a class="navbar__brand" href="#home">
+      <img src="assets/logo.jpg" alt="TastyBake Logo" class="navbar__logo">
+      <span>TastyBake</span>
+    </a>
+    <!-- Navigation Menu -->
+    <ul class="navbar__menu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#portfolio" class="nav-link">Products</a></li>
+      <li><a href="#carousel" class="nav-link">Speciality</a></li>
+      <li><a href="#info" class="nav-link">Why us</a></li>
+      <li><a href="#know-us" class="nav-link">Know Us</a></li>
+    </ul>
+  </nav>
+  </header>
+
+
+    <!-- 🟩 Hero Section -->
+  <section class="section section--hero" id="home">
+    <div class="hero-content">
+      <h1 class="fade-in">Welcome to TastyBake!</h1>
+      <p class="fade-in">"Where tradition meets flavor."</p>
+    </div>
+  </section>
+
+
+  <!-- 🟥 Portfolio -->
+  <section class="section section--portfolio" id="portfolio">
+    <h2 class="fade-in">OUR PRODUCTS</h2>
+
+    <div class="portfolio-grid">
+      <div class="product-card" data-product="1">
+        <img src="assets/cake 1.jpg" alt="Cheesecake">
+        <h3>Cheesecake</h3>
+      </div>
+
+      <div class="product-card" data-product="2">
+        <img src="assets/cake 2.jpg" alt="Chocolate Cake">
+        <h3>Chocolate Cake</h3>
+      </div>
+
+      <div class="product-card" data-product="3">
+        <img src="assets/cake 3.jpg" alt="Muffins">
+        <h3>Muffins</h3>
+      </div>
+
+      <div class="product-card" data-product="4">
+        <img src="assets/cake 4.jpg" alt="Chocolate Cookies">
+        <h3>Chocolate Cookies</h3>
+      </div>
+
+      <div class="product-card" data-product="5">
+        <img src="assets/cake 5.jpg" alt="Pistachio Croissant">
+        <h3>Croissants</h3>
+      </div>
+
+      <div class="product-card" data-product="6">
+        <img src="assets/cake 6.jpg" alt="Chocolate Pastry">
+        <h3>Chocolate Pastry</h3>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 🌀 Carousel Section -->
+  <section class="section section--carousel" id="carousel">
+    <h2>Our Speciality: Croissants</h2>
+    <div class="carousel">
+      <button class="carousel__btn carousel__btn--prev">&#10094;</button>
+      <div class="carousel__track-container">
+        <ul class="carousel__track">
+    <!-- Slide 1 -->
+          <li class="carousel__slide">
+              <div class="carousel__content--horizontal">
+                  <div class="carousel__image-wrapper">
+                      <img src="assets/croissant-1.jpg" alt="Classic Croissant">
+                  </div>
+                  <div class="carousel__text">
+                      <h3>Ham & Cheese Croissant</h3>
+                      <p>Savory layers of ham and melted cheese baked into golden dough.Perfectly balanced for breakfast or a light lunch.Warm, filling, and freshly baked each morning.</p>
+                  </div>
+                  
+                  
+              </div>
+          </li>
+
+
+    <!-- Slide 2 -->
+          <li class="carousel__slide">
+              <div class="carousel__content--horizontal">
+                  <div class="carousel__image-wrapper">
+                      <img src="assets/croissant-2.jpg" alt="Chocolate Croissant">
+                  </div>
+                  <div class="carousel__text">
+                      <h3>Chocolate Croissant</h3>
+                      <p>Flaky pastry wrapped around rich dark chocolate bars.Crisp on the outside, warm and melty inside.A timeless favorite for every chocolate lover.</p>
+                  </div>
+              </div>
+          </li>
+
+          <!-- Slide 3 -->
+          <li class="carousel__slide">
+              <div class="carousel__content--horizontal">
+                  <div class="carousel__image-wrapper">
+                      <img src="assets/croissant-3.jpg" alt="Pistachio Croissant">
+                  </div>
+                  <div class="carousel__text">
+                      <h3>Pistachio Croissant</h3>
+                      <p>A delicate, buttery croissant filled with smooth pistachio cream.Topped with crushed pistachios for texture and rich aroma.Elegant and nutty—an indulgent twist on a French classic.</p>
+                  </div>
+              </div>
+          </li>
+        </ul>
+      </div>
+      <button class="carousel__btn carousel__btn--next">&#10095;</button>
+    </div>
+
+  </section>
+
+<section class="section section--info" id="info">
+  <h2>Why Choose TastyBake?</h2>
+
+  <div class="info-grid">
+    <!-- Column 1 -->
+    <div class="info-block">
+      <div class="info-icon">
+        <img src="assets/modal1.jpg" alt="Fresh Icon">
+      </div>
+      <h3>Tradition & Quality</h3>
+      <p>We honor traditional baking methods passed down through generations.Each product is handcrafted with care and attention to detail.Only premium ingredients make it into our recipes.</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="info-block">
+      <div class="info-icon">
+        <img src="assets/modal2.png" alt="Fresh Icon">
+      </div>
+      <h3>Fresh Every Day</h3>
+      <p>Our baked goods are made daily to ensure maximum freshness.Straight from the oven to your hands—warm, soft, and full of flavor.You will taste the difference in every bite.</p>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="info-block">
+      <div class="info-icon">
+        <img src="assets/modal33.jpg" alt="Fresh Icon">
+      </div>
+      <h3>Local & Sustainable</h3>
+      <p>We source locally to support our community and reduce our footprint.Sustainable practices guide every step of our baking process.Good for you, good for the planet.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- 🟨 know-us -->
+    <section class="section section--video" id="know-us">
+      <h2>Know Us Better</h2>
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/c0h1Lgo1_VA" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+
+
+  <!-- 🟫 Footer -->
+    <footer class="footer">
+      &copy; Pablo Carreras
+      <div class="footer__social-list">
+        <div class="social-item">
+          <img src="assets/icons/instagram.jpg" alt="Instagram icon">
+          <span>Instagram</span>
+        </div>
+        <div class="social-item">
+          <img src="assets/icons/facebook.jpg" alt="Facebook icon">
+          <span>Facebook</span>
+        </div>
+        <div class="social-item">
+          <img src="assets/icons/tik tok.png" alt="tik tok icon">
+          <span>TikTok</span>
+        </div>
+      </div>
+    </footer>
+
+
+/* Modal Structure */
+
+<div class="modal" id="product-modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <img id="modal-img" src="assets/icons/instagram.jpg" alt="hi">
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+  </div>
+</div>
+
+</body>
+</html>
