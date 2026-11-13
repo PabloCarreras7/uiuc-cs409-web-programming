@@ -1,3 +1,18 @@
+## What I built
+
+A recipe browser built in React + TypeScript on top of [TheMealDB](https://www.themealdb.com/api.php) API:
+- **List view:** search-as-you-type, with sorting by property and ascending/descending order
+- **Gallery view:** meal images with category filters
+- **Detail view:** full recipe information, with previous/next navigation through the current results
+
+Stack: React, TypeScript, React Router, Axios (Create React App).
+
+**Run:** `npm install && npm start` → http://localhost:3000/mp2
+
+---
+
+> *Everything below this line is the original assignment specification provided by the CS 409 course staff.*
+
 # MP 2: New Clear REACTive App
 ### Due: October 7th, 2025, 11:59PM CDT
 

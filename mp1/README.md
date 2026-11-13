@@ -1,3 +1,22 @@
+## What I built
+
+**TastyBake**, a single-page website for a fictional bakery. It meets the MP1 requirements:
+- full-width sections with a header and footer
+- a sticky navbar that shrinks (including its font size) on scroll, with a position indicator for the current section
+- smooth scrolling between sections
+- an image carousel showing the croissant specialties
+- product modals
+- an embedded video
+- fade-in CSS animations
+
+Stack: HTML5, SCSS, vanilla JavaScript, webpack.
+
+**Run:** `npm install && npm start` → http://localhost:8080
+
+---
+
+> *Everything below this line is the original assignment specification provided by the CS 409 course staff.*
+
 # MP #1: One Web Page To Rule Them All
 ### Due: September 23 2025, 11:59PM CDT
 

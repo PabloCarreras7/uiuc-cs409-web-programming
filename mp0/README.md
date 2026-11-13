@@ -1,3 +1,13 @@
+## What I built
+
+A personal profile card for MP0: a centered card with my photo (150×150), name, contact links and a short bio, built with plain HTML and with all styling in an external CSS file, matching the course's reference layout. Stack: HTML, CSS, webpack dev server.
+
+**Run:** `npm install && npm start` → http://localhost:8080
+
+---
+
+> *Everything below this line is the original assignment specification provided by the CS 409 course staff.*
+
 # MP 0: The Basics
 ### Due: Tuesday, Sep 9, 11:59PM
 

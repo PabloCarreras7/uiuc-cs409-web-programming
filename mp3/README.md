@@ -1,3 +1,19 @@
+## What I built
+
+A REST API for a task-management app (Llama.io), built with Node, Express and Mongoose:
+- CRUD endpoints for `/api/users` and `/api/tasks`
+- JSON query parameters `where`, `sort`, `select`, `skip`, `limit` and `count`
+- input validation and consistent `{ message, data }` responses with appropriate HTTP status codes
+- two-way consistency between a user's `pendingTasks` and each task's `assignedUser` / `assignedUserName`
+
+Stack: Node.js, Express, MongoDB (Atlas), Mongoose. The `database_scripts/` were provided by the course.
+
+**Run:** create a `.env` with `MONGODB_URI=<your connection string>` and `PORT=3000`, then `npm install && npm start` → http://localhost:3000/api. Never commit `.env`.
+
+---
+
+> *Everything below this line is the original assignment specification provided by the CS 409 course staff.*
+
 # MP #3: APIed Piper
 ### Due: November 4th, 2025, 11:59PM CT
 
